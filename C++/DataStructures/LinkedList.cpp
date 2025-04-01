@@ -53,18 +53,6 @@ class LinkedList{
         }
     }
 
-    void printList(){
-        Node *ptr = this->head;
-        if(ptr == nullptr){
-            std:: cout << "List Empty" <<std::endl;
-        }else{
-            while(ptr != nullptr){
-                std:: cout << ptr->getData() << std::endl;
-                ptr = ptr->getNext();
-            }
-        }
-    }
-
     void popBack(){
         Node* ptr = this->head;
         Node* prev = nullptr;
@@ -78,6 +66,24 @@ class LinkedList{
             prev->setNext(nullptr);
         }
     }
+
+    void pushFront(int data){
+        Node *newNode = new Node(data);
+        newNode->setNext(this->head);
+        this->head = newNode;  
+    }
+
+    void printList(){
+        Node *ptr = this->head;
+        if(ptr == nullptr){
+            std:: cout << "List Empty" <<std::endl;
+        }else{
+            while(ptr != nullptr){
+                std:: cout << ptr->getData() << std::endl;
+                ptr = ptr->getNext();
+            }
+        }
+    }
 };
 
 
@@ -88,11 +94,17 @@ int main() {
     myList.pushBack(1);
     myList.pushBack(3);
     myList.pushBack(2);
-    
+    std::cout << "pushBack" <<std::endl; 
     myList.printList();
 
     myList.popBack();
-
+    std::cout << "popBack" <<std::endl; 
     myList.printList();
+
+    myList.pushFront(2);
+    std::cout << "pushFront" <<std::endl; 
+    myList.printList();
+
+    std::cout << "hello word" <<std::endl; 
     return 0;
 }
