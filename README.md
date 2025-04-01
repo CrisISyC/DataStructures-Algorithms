@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-This repository contains implementations of various data structures and algorithms in **Java** and **C++**. It serves as a learning resource and reference for anyone interested in computer science and software development.
+This repository contains implementations of various data structures and algorithms. It serves as a learning resource and reference for anyone interested in computer science and software development.
 
 ## Contents
 
@@ -24,11 +24,3 @@ This repository contains implementations of various data structures and algorith
 
 - **Java**: Implementations of data structures and algorithms in Java.
 - **C++**: Implementations of data structures and algorithms in C++.
-
-## Contribution
-
-Feel free to contribute by adding new implementations, improving existing ones, or optimizing performance.
-
-## License
-
-This project is open-source and available under the MIT License.
