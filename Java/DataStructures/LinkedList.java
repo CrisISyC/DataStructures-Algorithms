@@ -7,23 +7,40 @@ public class LinkedList {
     
     public Node(int data){
         this.data = data;
+        this.next = null;
+    }
+
+    public int getData(){
+        return this.data;
+    }
+
+    public void setData(int data){
+        this.data = data;
+    }
+
+    public Node getNext(){
+        return this.next;
+    }
+
+    public void setNext(Node next){
+        this.next = next;
     }
 }
     Node head;
     
     void pushFront(int data){
         Node node = new Node(data);
-        node.next = head;
+        node.setNext(head);
         head = node;
     }
     
     int topFront(){
         
-        return head.data;
+        return head.getData();
     }
     
     void popFront(){
-        head = head.next;
+        head = head.getNext();
     }
     
     void pushBack(int data){
@@ -32,10 +49,10 @@ public class LinkedList {
         if(head == null){
             head = node;
         }else{
-            while(current.next != null){
-                current = current.next;
+            while(current.getNext() != null){
+                current = current.getNext();
             }
-            current.next = node;
+            current.setNext(node);
         }
     }   
     
@@ -44,10 +61,10 @@ public class LinkedList {
         if(head == null){
             return 0;
         }
-        while(current.next != null){
-            current = current.next;
+        while(current.getNext() != null){
+            current = current.getNext();
         }
-        return current.data;
+        return current.getData();
     }
     
     void popBack(){
@@ -56,12 +73,12 @@ public class LinkedList {
             System.out.println("List Empty");
         }else{
             Node prev = current;
-            while(current.next != null){
+            while(current.getNext() != null){
                 prev = current;
-                current = current.next;
+                current = current.getNext();
             }
             
-            prev.next = null;
+            prev.setNext(null);
         }
     }
     
@@ -72,10 +89,10 @@ public class LinkedList {
         }else{
             while(current != null){
                 
-                if(current.data == data){
+                if(current.getData() == data){
                     return true;
                 }else{
-                    current = current.next;   
+                    current = current.getNext();   
                 }
             }
         }  
@@ -95,8 +112,8 @@ public class LinkedList {
             System.out.println("List Empty");
         }else{
             while(current != null){  
-                System.out.println(current.data);
-                current = current.next;
+                System.out.println(current.getData());
+                current = current.getNext();
             }
         }
     }

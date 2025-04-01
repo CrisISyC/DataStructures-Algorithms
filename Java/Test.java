@@ -2,8 +2,10 @@
 public class Test {
     public static void main(String[] args) {
         
-        OrderedLinkedList myList = new OrderedLinkedList();
-        
+        /*LinkedList myList = new LinkedList();*/
+        DoublyLinkedList myList = new DoublyLinkedList();
+        /*OrderedLinkedList myList = new OrderedLinkedList();
+    
         myList.insert(2);
         myList.insert(5);
         myList.insert(1);
@@ -15,16 +17,16 @@ public class Test {
         myList.insert(2);
         myList.insert(3);
         myList.insert(7);
-        myList.insert(6);
+        myList.insert(6);*/
         
-        /*DoublyLinkedList myList = new DoublyLinkedList();
+        
         
         myList.pushBack(1);
         myList.pushBack(2);
         myList.pushBack(3);
         myList.pushBack(6);
         myList.pushBack(7);
-        myList.pushBack(8);*/
+        myList.pushBack(8);
         
         myList.printList();
     }
